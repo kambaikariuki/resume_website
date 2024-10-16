@@ -1,0 +1,214 @@
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: black;
+    background-color: white;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Helpful for sizing */
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+}
+
+#logo a {
+    text-decoration: none;
+    color: black;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    flex-direction: column;
+}
+
+nav ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav li {
+    height: 50px;
+}
+
+nav a {
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: center;
+}
+
+nav a:hover {
+    background-color: #f0f0f0;
+    font-size: large;
+}
+
+.hero {
+    display: flex;
+    padding-top: 3rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allow wrapping */
+}
+
+img {
+    padding-left: 5rem;
+    border-radius: 50%;
+}
+
+.hero .hero-paragraph {
+    padding-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding-left: 4rem;
+    flex-grow: 1;
+}
+
+.overview h2 {
+    text-align: start;
+    padding-bottom: 1rem;
+}
+
+.overview {
+    padding: 3rem 7rem; /* Uniform padding */
+}
+
+.overview p {
+    padding-bottom: 2rem;
+}
+
+.footer {
+    display: flex;
+    justify-content: left;
+    background-color: white;
+    box-shadow: 0px -3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.footer a {
+    text-decoration: none;
+    color: black;
+}
+
+.footer a:hover {
+    background-color: #f0f0f0;
+}
+
+.footer .links {
+    padding-left: 17rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5rem;
+}
+
+.footer .links div {
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer .logo {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.content {
+    flex: 1; /* Allows content area to grow */
+}
+body {
+    flex-grow: 1;
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 767px) {
+    body, html {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        font-size: 0.9rem;
+    }
+
+    nav ul {
+        display: none; /* Hide navigation on small screens */
+    }
+
+    .hero {
+        flex-direction: column; /* Stack hero elements */
+        align-items: center; /* Center items */
+    }
+
+    img {
+        padding: 0;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .footer .links {
+        display: none; /* Hide links in footer */
+    }
+
+    .overview {
+        padding: 1rem; /* Reduce padding */
+        width: 100%; /* Full width */
+    }
+
+    .overview p {
+        margin: 0; 
+        padding: 0 2rem; /* Consistent padding */
+    }
+
+    .hero .hero-paragraph {
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column; /* Stack content vertically */
+        align-items: center; /* Center content */
+        max-width: 90%; /* Make it a bit smaller */
+        margin: 0 auto; /* Center content */
+        
+    }
+
+    .content li, .content p, .content span, .content h2 {
+        text-align: center;
+        width: 100%; /* Full width for smaller screens */
+    }
+    .content li {
+        margin-bottom: 3rem;
+    }
+}
