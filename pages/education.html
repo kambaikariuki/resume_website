@@ -11,16 +11,26 @@
     
     
     <header class="header">
-        <div id="logo"><h3><a href="/index.html">joseph kambai</a></h3></div>
+        <div id="logo"><h3><a href="/resume_website/">joseph kambai</a></h3></div>
         <!-- Navigation Bar -->
         
         <div>
             <Nav class="navbar">
-                <ul>
+                <ul class="sidebar">
+                    <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                    <li><a href="/resume_website/">Home</a></li>
                     <li><a href="education.html">Education</a></li>
                     <li><a href="experience.html">Work Experience</a></li>
-                    <li><a href="hobbies.html">Interests/Hobbies</a></li>
+                    <li><a href="hobbies.html">Skills/Hobbies</a></li>
                     
+        
+                </ul>
+                <ul>
+                    <li><a class="hideOnMobile" href="education.html">Education</a></li>
+                    <li><a class="hideOnMobile" href="experience.html">Work Experience</a></li>
+                    <li><a class="hideOnMobile" href="hobbies.html">Skills/Hobbies</a></li>
+                    <li class="menu-btn" onclick= showSidebar() ><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+        
                 </ul>
             </Nav>
         </div>
@@ -49,12 +59,18 @@
                 </ul>
             </section>
             </div>
-            
-    
-           
-
         
+            <script>
+                function showSidebar() {
+                    const sidebar = document.querySelector('.sidebar');
+                    sidebar.style.display = 'flex';
+                }
 
+                function hideSidebar() {
+                    const sidebar = document.querySelector('.sidebar');
+                    sidebar.style.display = 'none';
+                }
+            </script>
     </body>
 
     <!-- Footer -->
@@ -66,13 +82,13 @@
                 <h3>Quick Links</h3>
                 <a href="education.html">Education</a>
                 <a href="experience.html">Work Experience</a>
-                <a href="hobbies.html">Interests/Hobbies</a> 
+                <a href="hobbies.html">Skills/Hobbies</a> 
             </div>
             <div class="socials">
                 <h3>Socials</h3>
-                <a href="">LinkedIn</a>
+                <a href="www.linkedin.com/in/joseph-kariuki-8baa901a7">LinkedIn</a>
                 <a href="">Twitter</a>
-                <a href="">Instagram</a>
+                <a href="https://www.instagram.com/kambaikariuki/">Instagram</a>
             </div>
             <div>
                 <h3>Email</h3>
